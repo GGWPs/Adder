@@ -18,7 +18,6 @@ public class Adder {
 
 			String[] addNumbers = numbers.split("//|,|\n|;");
 			for (int i = 0; i < addNumbers.length; i++) {
-				addNumbers[i].replaceAll("[\\s|\\u00A0]+", "");
 				if(addNumbers[i].equals("") || addNumbers[i].isEmpty() || Integer.parseInt(addNumbers[i]) > 1000){
 					//do nothing
 				} else if(Integer.parseInt(addNumbers[i]) < 0){
@@ -28,6 +27,7 @@ public class Adder {
 				}
 			}
 			if(negatiefGetallen.size() > 0){
+				System.out.println("Negatieve waarde niet toegestaan:" + Arrays.toString(negatiefGetallen.toArray()));
 				throw new Exception("Negatieve waarde niet toegestaan:" + Arrays.toString(negatiefGetallen.toArray()));
 			} else {
 				return uitvoer;

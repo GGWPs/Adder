@@ -69,9 +69,16 @@ public class AdderTest {
 	}
 
 	@Test
-	public void testStringOver1000() throws  Exception{
+	public void testStringOver1000() throws Exception{
 		int addedNumber = adder.add("2,1001");
 
 		Assertions.assertEquals(2, addedNumber);
+	}
+
+	@Test
+	public void testStringMultipleLengthDelimiters() throws Exception{
+		int addedNumber = adder.add("//[***]\\n1***2***3");
+
+		Assertions.assertEquals(6, addedNumber);
 	}
 }
