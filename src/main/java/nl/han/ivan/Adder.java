@@ -15,7 +15,6 @@ public class Adder {
 		int uitvoer = 0;
 		List<String> negatiefGetallen = new ArrayList<>();
 		if (numbers.contains(",") || numbers.contains("\n") || numbers.contains("//") || numbers.contains(";")) {
-
 			String[] addNumbers = numbers.split("//|,|\n|;");
 			for (int i = 0; i < addNumbers.length; i++) {
 				if(addNumbers[i].equals("") || addNumbers[i].isEmpty() || Integer.parseInt(addNumbers[i]) > 1000){
